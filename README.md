@@ -11,11 +11,11 @@ This is an Arena in which you can add bots you have coded to see them fight.
 3. Run `main.pyw`
 ## Requirements
 - Python 3.7
-- Python tkinter library
-- Python importlib library
-- Python sys library
-- Python os library
-- Python random library
+- Python `tkinter` library
+- Python `importlib` library
+- Python `sys` library
+- Python `os` library
+- Python `random` library
 ## Usage
 First of all you have to create bots. Bots files have to be place in the `Bots` folder and contain a class named `Bot`.
 
@@ -23,7 +23,7 @@ First of all you have to create bots. Bots files have to be place in the `Bots` 
 ```Python
 class Bot:
     def __init__(self):
-        <your code>
+        # Your code...
 
     def init(self, arena_infos, bot_stats):
         """Called at the beginning of a fight
@@ -39,7 +39,7 @@ class Bot:
         -------
         None
         """
-        <your code>
+        # Your code...
 
     def run(self, bot_stats, others_stats):
         """Called when it's the bot turn
@@ -56,34 +56,34 @@ class Bot:
         str
             A string representing a list of actions separated by ';'
         """
-        <your code>
+        # Your code...
 ```
 
 Structure of the arena infos dict :
-```
+```JSON
 {
-    "X"           : the x coordinate of the bot,
-    "Y"           : the y coordinate of the bot,
-    "Orientation" : the orientation of the bot (0 for UP, 1 for RIGHT, 2 for DOWN and 3 for LEFT),
-    "Hp"          : the bot HP,
-    "Damages"     : the bot damages,
+    "X"           : "the x coordinate of the bot",
+    "Y"           : "the y coordinate of the bot",
+    "Orientation" : "the orientation of the bot (0 for UP, 1 for RIGHT, 2 for DOWN and 3 for LEFT)",
+    "Hp"          : "the bot HP",
+    "Damages"     : "the bot damages",
 }
 ```
 
 Structure of a bot stats dict :
-```
+```JSON
 {
-    "Width"       : the width of the grid,
-    "Height"      : the height of the grid,
-    "FaceDamages" : the damages multiplier if the attack comes from the front,
-    "SideDamages" : the damages multiplier if the attack comes from the side,
-    "BackDamages" : the damages multiplier if the attack comes from the back,
-    "NRotations"  : the number of rotations that can be made in each round,
-    "NMoves"      : the number of moves that can be made in each round,
-    "NAttacks"    : the number of attacks that can be made in each round,
-    "MaxHp"       : the maximum number of HP a bot can have,
-    "MaxDamages"  : the maximum number of damages a bot can have,
-    "Grid"        : the arena grid (a two-dimensional array of integers 0 if there is a wall, 1 else),
+    "Width"       : "the width of the grid",
+    "Height"      : "the height of the grid",
+    "FaceDamages" : "the damages multiplier if the attack comes from the front",
+    "SideDamages" : "the damages multiplier if the attack comes from the side",
+    "BackDamages" : "the damages multiplier if the attack comes from the back",
+    "NRotations"  : "the number of rotations that can be made in each round",
+    "NMoves"      : "the number of moves that can be made in each round",
+    "NAttacks"    : "the number of attacks that can be made in each round",
+    "MaxHp"       : "the maximum number of HP a bot can have",
+    "MaxDamages"  : "the maximum number of damages a bot can have",
+    "Grid"        : "the arena grid (a two-dimensional array of integers 0 if there is a wall, 1 else)",
 }
 ```
 
