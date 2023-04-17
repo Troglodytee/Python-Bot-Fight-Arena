@@ -62,17 +62,6 @@ class Bot:
 Structure of the arena infos dict :
 ```JSON
 {
-    "X"           : "the x coordinate of the bot",
-    "Y"           : "the y coordinate of the bot",
-    "Orientation" : "the orientation of the bot (0 for UP, 1 for RIGHT, 2 for DOWN and 3 for LEFT)",
-    "Hp"          : "the bot HP",
-    "Damages"     : "the bot damages",
-}
-```
-
-Structure of a bot stats dict :
-```JSON
-{
     "Width"       : "the width of the grid",
     "Height"      : "the height of the grid",
     "FaceDamages" : "the damages multiplier if the attack comes from the front",
@@ -84,6 +73,17 @@ Structure of a bot stats dict :
     "MaxHp"       : "the maximum number of HP a bot can have",
     "MaxDamages"  : "the maximum number of damages a bot can have",
     "Grid"        : "the arena grid (a two-dimensional array of integers 0 if there is a wall, 1 else)",
+}
+```
+
+Structure of a bot stats dict :
+```JSON
+{
+    "X"           : "the x coordinate of the bot",
+    "Y"           : "the y coordinate of the bot",
+    "Orientation" : "the orientation of the bot (0 for UP, 1 for RIGHT, 2 for DOWN and 3 for LEFT)",
+    "Hp"          : "the bot HP",
+    "Damages"     : "the bot damages",
 }
 ```
 
